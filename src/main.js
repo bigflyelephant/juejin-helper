@@ -180,6 +180,7 @@ ${e.stack}
 };
 
 juejinMain().catch(error => {
+  console.log('juejinMain',error);
   pushMessage({
     type: 'error',
     title: `掘金签到失败 💣`,
@@ -188,6 +189,7 @@ juejinMain().catch(error => {
 
 })
 readermMain().catch(error => {
+  console.log('readermMain',error);
   pushMessage({
     type: 'error',
 
@@ -197,6 +199,7 @@ readermMain().catch(error => {
 })
 
 tiebaMain().catch(error => {
+  console.log('tiebaMain',error);
   pushMessage({
     type: 'error',
     title: `贴吧签到失败 💣`,
@@ -205,6 +208,7 @@ tiebaMain().catch(error => {
 })
 
 yuanshenMain().catch((error) => {
+  console.log('yuanshenMain',error);
   pushMessage({
     type: "error",
     title: `原神签到失败 💣`,
