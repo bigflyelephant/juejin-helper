@@ -96,24 +96,24 @@ const juejinMain = async () => {
   growth.sumPoint = await juejin.getCurrentPoint();
 
   // BugFix
-  const notCollectBug = await juejin.getNotCollectBug();
+  // const notCollectBug = await juejin.getNotCollectBug();
 
-  if (notCollectBug.length > 0) {
-    const requests = notCollectBug.map((bug) => {
-      return async () => {
-        await juejin.collectBug(bug);
-        await wait(getRandomArbitrary(1000, 1500));
-      };
-    });
+  // if (notCollectBug.length > 0) {
+  //   const requests = notCollectBug.map((bug) => {
+  //     return async () => {
+  //       await juejin.collectBug(bug);
+  //       await wait(getRandomArbitrary(1000, 1500));
+  //     };
+  //   });
 
-    for (const request of requests) {
-      await request();
+  //   for (const request of requests) {
+  //     await request();
 
-      growth.collectBugCount++;
-    }
+  //     growth.collectBugCount++;
+  //   }
 
-    growth.collectedBug = true;
-  }
+  //   growth.collectedBug = true;
+  // }
 
   pushMessage({
     type: "info",
