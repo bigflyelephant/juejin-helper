@@ -2,11 +2,11 @@ const axios = require('axios')
 const SUCCESS_CODE = 200
 
 const http = axios.create({
-  baseURL: 'https://readerm.com',
+  baseURL: 'https://socloud.me',
   headers: {
-    'origin':"https://readerm.com",
+    'origin':"https://socloud.me",
     'content-type': 'application/json',
-    'referer': 'https://readerm.com/auth/login/',
+    'referer': 'https://socloud.me/auth/login/',
     'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="102", "Google Chrome";v="102"',
     'sec-ch-ua-mobile': '?0',
     'sec-ch-ua-platform': 'Windows',

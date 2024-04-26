@@ -35,14 +35,17 @@ class TieBa extends Api {
           if (error_code === "160002" || error_code === "0") {
             ok = true;
             console.log(
-              list[i].forum_name,
-              "签到成功",
+              // list[i].forum_name,
+              `第${i+1}个贴吧签到成功`,
               `     请求次数${3 - c}`
             );
           } else if(error_code==='340006'){
             console.log(
-              list[i].forum_name,
-              "签到失败",
+              // list[i].forum_name,
+              // "签到失败",
+              
+              // list[i].forum_name,
+              `第${i+1}个贴吧签到失败`,
               `     请求次数${3 - c}`,
               error_code,
               error_msg
@@ -51,8 +54,11 @@ class TieBa extends Api {
             continue;
           }else {
             console.log(
-              list[i].forum_name,
-              "签到失败",
+              // list[i].forum_name,
+              // "签到失败",
+              
+              // list[i].forum_name,
+              `第${i+1}个贴吧签到失败`,
               `     请求次数${3 - c}`,
               error_code,
               error_msg
@@ -60,10 +66,13 @@ class TieBa extends Api {
           }
         } catch (e) {
           console.log(
-            list[i].forum_name,
-            "签到失败",
+            // list[i].forum_name,
+            // "签到失败",
+            
+            // list[i].forum_name,
+            `第${i+1}个贴吧签到失败`,
             `     请求次数${3 - c}`,
-            e.stack
+            e?.stack
           );
         }
         await sleep(1000 * 10);
